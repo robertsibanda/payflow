@@ -37,7 +37,7 @@ jobs:
           cache: maven
 
       - name: Run tests
-        run: mvn -B test --file pom.xml
+        run: mvn -B test --file payflow/pom.xml
         env:
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/payflow_test
           SPRING_DATASOURCE_USERNAME: ${{ secrets.DB_USERNAME }}
